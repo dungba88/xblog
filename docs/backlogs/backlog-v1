@@ -1,0 +1,10 @@
+XBLOG BACKLOG v1
+Version 1:
+- create entry
+- update entry
+- delete entry
+- read 1 entry
+- read list entries
+- login/logout
+- search
+- integrate markdown
