@@ -1,1 +1,1 @@
-Helloworld
+Hello ${user.email}
