@@ -7,7 +7,12 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/tx
             http://www.springframework.org/schema/tx/spring-tx.xsd">
-            
-    <!-- import configuration -->
-    <import resource="config/*.xml"/>
+        
+   	<!-- JDBC DataSource -->
+	<bean id="xblogDS" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/xblog"/>
+        <property name="username" value="root"/>
+        <property name="password" value=""/>
+    </bean>
 </beans>
