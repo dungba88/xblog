@@ -1,6 +1,6 @@
 package org.xblog.app.models.user;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ public class User {
 	private String email;
 	private String pwd;
 	private String displayName;
-	private Timestamp createdTime;
+	private Date createdTime;
 
 	public int getId() {
 		return id;
@@ -53,11 +53,11 @@ public class User {
 		this.displayName = displayName;
 	}
 
-	public Timestamp getCreatedTime() {
+	public Date getCreatedTime() {
 		return createdTime;
 	}
 
-	public void setCreatedTime(Timestamp createdTime) {
+	public void setCreatedTime(Date createdTime) {
 		this.createdTime = createdTime;
 	}
 

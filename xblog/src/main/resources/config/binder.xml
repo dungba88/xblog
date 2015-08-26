@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- automatic property editoring -->
+	<bean id="xblogBinderInitializer"
+		class="org.xblog.impl.conversion.XblogBinderInitializer">
+		<!-- 
+		<property name="customEditors">
+			<map>
+				<entry key="java.sql.Timestamp">
+					<ref bean="timestampEditor" />
+				</entry>
+				<entry key="java.util.Date">
+					<ref bean="dateEditor" />
+				</entry>
+			</map>
+		</property>
+		-->
+	</bean>
+
+	<!-- convert timestamp -->
+	<bean id="timestampEditor" class="org.xblog.framework.conversion.TimestampEditor">
+		<property name="dateFormat" value="dd-MM-yyyy" />
+	</bean>
+
+	<!-- convert date -->
+	<bean id="dateEditor"
+		class="org.springframework.beans.propertyeditors.CustomDateEditor">
+
+		<constructor-arg>
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg value="dd-MM-yyyy" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+	</bean>
+</beans>

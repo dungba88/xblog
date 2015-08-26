@@ -4,7 +4,7 @@
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 	<definition name="xblog.entry.index" template="/themes/default/layouts/main.jsp">
-		<put-attribute name="header" value="/themes/default/tiles/general/header.jsp" />
+		<put-attribute name="header" value="/themes/default/tiles/entry/header.jsp" />
 		<put-attribute name="content" value="/themes/default/tiles/entry/index.jsp" />
 		<put-attribute name="footer" value="/themes/default/tiles/general/footer.jsp" />
 	</definition>

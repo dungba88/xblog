@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.xblog.app.models.user.User;
 
 @Transactional
 public abstract class AbstractDAO<T> implements DAOInterface<T> {

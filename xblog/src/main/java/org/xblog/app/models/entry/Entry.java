@@ -1,6 +1,6 @@
 package org.xblog.app.models.entry;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,10 +22,15 @@ public class Entry {
 	private String markdownContent;
 
 	private int userId;
+	private String userAlias;
 	private String userDisplayName;
+	
+	private int categoryId;
+	private String categoryAlias;
+	private String categoryName;
 
-	private Timestamp createdTime;
-	private Timestamp lastUpdatedTime;
+	private Date createdTime;
+	private Date lastUpdatedTime;
 
 	public int getId() {
 		return id;
@@ -67,19 +72,19 @@ public class Entry {
 		this.markdownContent = markdownContent;
 	}
 
-	public Timestamp getCreatedTime() {
+	public Date getCreatedTime() {
 		return createdTime;
 	}
 
-	public void setCreatedTime(Timestamp createdTime) {
+	public void setCreatedTime(Date createdTime) {
 		this.createdTime = createdTime;
 	}
 
-	public Timestamp getLastUpdatedTime() {
+	public Date getLastUpdatedTime() {
 		return lastUpdatedTime;
 	}
 
-	public void setLastUpdatedTime(Timestamp lastUpdatedTime) {
+	public void setLastUpdatedTime(Date lastUpdatedTime) {
 		this.lastUpdatedTime = lastUpdatedTime;
 	}
 
@@ -105,5 +110,37 @@ public class Entry {
 
 	public void setAlias(String alias) {
 		this.alias = alias;
+	}
+
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getCategoryAlias() {
+		return categoryAlias;
+	}
+
+	public void setCategoryAlias(String categoryAlias) {
+		this.categoryAlias = categoryAlias;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public String getUserAlias() {
+		return userAlias;
+	}
+
+	public void setUserAlias(String userAlias) {
+		this.userAlias = userAlias;
 	}
 }
