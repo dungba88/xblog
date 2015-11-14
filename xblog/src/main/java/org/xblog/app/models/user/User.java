@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "xblg_users")
+@Table(name = "users")
 public class User {
 
 	@Id
@@ -18,6 +18,7 @@ public class User {
 	private String userName;
 	private String email;
 	private String pwd;
+	private String alias;
 	private String displayName;
 	private Date createdTime;
 
@@ -67,5 +68,13 @@ public class User {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
 	}
 }

@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "xblg_entries")
+@Table(name = "entries")
 public class Entry {
 
 	@Id

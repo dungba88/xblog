@@ -16,4 +16,9 @@ public class UserDAOImpl extends AbstractDAO<User> implements UserDAO {
 	public User getByUserName(String userName) {
 		return getByField("userName", userName);
 	}
+	
+	@Override
+	public User getByAlias(String alias) {
+		return getByField("alias", alias);
+	}
 }

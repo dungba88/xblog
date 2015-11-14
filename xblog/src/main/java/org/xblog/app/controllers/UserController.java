@@ -25,7 +25,10 @@ public class UserController extends XblogController {
 	
 	@RequestMapping("/{authorName}")
 	public void index(@PathVariable("authorName") String authorName, Model model) {
-		User user = userDAO.getByUserName(authorName);
+		User user = userDAO.getByAlias(authorName);
+		if (user == null) {
+			// TODO invalid user
+		}
 		List<Entry> entries = entryDAO.getEntriesByUser(user.getId());
 		
 		model.addAttribute("user", user);

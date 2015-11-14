@@ -16,7 +16,7 @@ import org.xblog.framework.views.ViewNameResolver;
 public class PageViewResolverInterceptor extends HandlerInterceptorAdapter {
 	
 	private ViewNameResolver viewNameResolver;
-
+	
 	@Override
 	public void postHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler,
