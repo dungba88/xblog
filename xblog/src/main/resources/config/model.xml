@@ -29,7 +29,9 @@
 		<property name="namingStrategy"><ref bean="namingStrategy"/></property>
     </bean>
     
-    <bean id="namingStrategy" class="org.hibernate.cfg.ImprovedNamingStrategy"/>
+    <bean id="namingStrategy" class="org.xblog.framework.models.XblogNamingStrategy">
+    	<property name="prefix" value="xblg_"/>
+    </bean>
     
     <!-- Automatic transaction handling -->
     <tx:annotation-driven transaction-manager="transactionManager" />

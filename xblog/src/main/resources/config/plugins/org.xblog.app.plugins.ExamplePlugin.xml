@@ -7,11 +7,8 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/tx
             http://www.springframework.org/schema/tx/spring-tx.xsd">
-            
-    <!-- import system configuration -->
-    <import resource="config/*.xml"/>
-
-    <!-- import plugins configuration -->
-    <import resource="config/plugins/*.xml"/>
+        
+    <!-- plugin declaration -->
+    <bean id="org.xblog.app.plugins.ExamplePlugin" class="org.xblog.app.plugins.ExamplePlugin"/>
 
 </beans>

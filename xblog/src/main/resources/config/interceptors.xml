@@ -22,6 +22,12 @@
 				</property>
 			</bean>
 		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean id="subjectInterceptor"
+				class="org.xblog.framework.interceptors.SubjectInterceptor">
+			</bean>
+		</mvc:interceptor>
 	</mvc:interceptors>
 
 	<bean id="controllerActionViewNameResolver" class="org.xblog.impl.views.ControllerActionViewNameResolver">

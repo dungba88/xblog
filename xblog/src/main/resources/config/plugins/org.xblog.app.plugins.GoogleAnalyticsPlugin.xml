@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd">
+        
+    <bean id="org.xblog.app.plugins.GoogleAnalyticsPlugin" class="org.xblog.app.plugins.GoogleAnalyticsPlugin">
+	    
+	    <!-- plugin specific config -->
+    	<property name="configItem">
+			<bean class="org.xblog.framework.configs.HashMapConfigItem">
+				<property name="map">
+					<map>
+						<entry key="model">
+							<map>
+								<entry key="google_analytics_id" value="UA-54802171-1" />
+							</map>
+						</entry>
+					</map>
+				</property>
+			</bean>
+		</property>
+    </bean>
+</beans>

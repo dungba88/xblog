@@ -10,13 +10,19 @@
 </head>
 <body>
 	<header class="main-header">
+		${hooks.beforeHeader}
 		<tiles:insertAttribute name="header" />
+		${hooks.afterHeader}
 	</header>
 	<main id="content" role="content">
+		${hooks.beforeContent}
 		<tiles:insertAttribute name="content" />
+		${hooks.afterContent}
 	</main>
 	<footer>
+		${hooks.beforeFooter}
 		<tiles:insertAttribute name="footer" />
+		${hooks.afterFooter}
 	</footer>
 </body>
 </html>

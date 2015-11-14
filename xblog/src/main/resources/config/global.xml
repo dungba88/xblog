@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- global configuration -->
+	<bean id="globalConfig" class="org.xblog.framework.configs.XblogConfig" 
+			factory-method="getInstance" lazy-init="false">
+		<property name="configurations">
+			<!-- configuration entries -->
+			<map>
+				<entry key="PluginConfig">
+					<ref bean="pluginConfig" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- plugin configuration -->
+	<bean id="pluginConfig" class="org.xblog.framework.configs.HashMapConfigItem">
+		<property name="map">
+			<map>
+				<entry key="view.prefix" value="/WEB-INF/jsp/plugins/"/>
+				<entry key="view.suffix" value=".jsp"/>
+				<entry key="view.defaultResolver">
+					<ref bean="jstlViewResolver"/>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>
