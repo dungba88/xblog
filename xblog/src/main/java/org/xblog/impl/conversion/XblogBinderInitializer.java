@@ -5,10 +5,12 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.stereotype.Component;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.xblog.framework.controllers.BinderInitializer;
 
+@Component
 public class XblogBinderInitializer implements BinderInitializer {
 
 	private Map<Class<?>, ? extends PropertyEditor> customEditors;

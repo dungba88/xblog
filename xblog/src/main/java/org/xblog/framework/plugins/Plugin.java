@@ -1,6 +1,7 @@
 package org.xblog.framework.plugins;
 
 import org.xblog.framework.configs.XblogConfigItem;
+import org.xblog.framework.interceptors.Observer;
 
 public interface Plugin extends Observer {
 

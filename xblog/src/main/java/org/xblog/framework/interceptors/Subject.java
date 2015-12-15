@@ -1,4 +1,4 @@
-package org.xblog.framework.plugins;
+package org.xblog.framework.interceptors;
 
 import java.util.List;
 

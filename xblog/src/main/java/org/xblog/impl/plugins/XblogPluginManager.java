@@ -3,7 +3,7 @@ package org.xblog.impl.plugins;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.xblog.framework.plugins.Observer;
+import org.xblog.framework.interceptors.Observer;
 import org.xblog.framework.plugins.Plugin;
 import org.xblog.framework.plugins.PluginManager;
 import org.xblog.framework.plugins.messages.XblogMessage;
