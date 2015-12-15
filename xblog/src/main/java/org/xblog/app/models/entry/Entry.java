@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 @Entity
 @Table(name = "entries")
 public class Entry {
@@ -17,8 +20,13 @@ public class Entry {
 
 	private String title;
 	private String alias;
-	private String content;
+	
 	private String shortContent;
+
+	@JsonInclude(Include.NON_NULL)
+	private String content;
+	
+	@JsonInclude(Include.NON_NULL)
 	private String markdownContent;
 
 	private int userId;

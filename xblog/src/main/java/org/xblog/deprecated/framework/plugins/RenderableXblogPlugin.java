@@ -1,4 +1,4 @@
-package org.xblog.framework.plugins;
+package org.xblog.deprecated.framework.plugins;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,11 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ViewResolver;
+import org.xblog.deprecated.framework.views.Renderer;
 import org.xblog.framework.constants.MessageConstants;
+import org.xblog.framework.plugins.AbstractXblogPlugin;
 import org.xblog.framework.plugins.messages.HandlerInterceptorPayload;
 import org.xblog.framework.plugins.messages.XblogMessage;
-import org.xblog.framework.views.Renderer;
 
+@Deprecated
 public abstract class RenderableXblogPlugin extends AbstractXblogPlugin {
 	
 	private ViewResolver viewResolver;

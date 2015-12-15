@@ -23,12 +23,17 @@ public abstract class AbstractDAO<T> implements DAOInterface<T> {
 		Session session = sessionFactory.getCurrentSession();
 		return (T) session.get(getModelClass(), id);
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	protected T getByField(String fieldName, Object fieldValue) {
 		Criteria criteria = createCriteria();
 		return (T) criteria.add(Restrictions.eq(fieldName, fieldValue))
 				.uniqueResult();
+	}
+	
+	@SuppressWarnings("unchecked")
+	protected List<T> getList() {
+		return createCriteria().list();
 	}
 	
 	@SuppressWarnings("unchecked")

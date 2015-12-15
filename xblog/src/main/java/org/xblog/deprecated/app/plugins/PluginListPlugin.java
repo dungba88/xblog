@@ -1,11 +1,11 @@
-package org.xblog.app.plugins;
+package org.xblog.deprecated.app.plugins;
 
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.xblog.framework.exceptions.XblogExceptionUtils;
+import org.xblog.deprecated.framework.exceptions.XblogExceptionUtils;
+import org.xblog.deprecated.framework.plugins.RenderableXblogPlugin;
 import org.xblog.framework.plugins.PluginManager;
-import org.xblog.framework.plugins.RenderableXblogPlugin;
 import org.xblog.framework.plugins.messages.HandlerInterceptorPayload;
 
 public class PluginListPlugin extends RenderableXblogPlugin {

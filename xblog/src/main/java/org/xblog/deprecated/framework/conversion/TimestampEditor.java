@@ -1,10 +1,11 @@
-package org.xblog.framework.conversion;
+package org.xblog.deprecated.framework.conversion;
 
 import java.beans.PropertyEditorSupport;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+@Deprecated
 public class TimestampEditor extends PropertyEditorSupport {
 
 	private String dateFormat;

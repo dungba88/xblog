@@ -1,4 +1,4 @@
-package org.xblog.impl.views;
+package org.xblog.deprecated.impl.views;
 
 import java.util.Locale;
 import java.util.Map;
@@ -9,7 +9,7 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
-import org.xblog.framework.views.Renderer;
+import org.xblog.deprecated.framework.views.Renderer;
 
 @Component
 public class XblogRenderer implements Renderer {

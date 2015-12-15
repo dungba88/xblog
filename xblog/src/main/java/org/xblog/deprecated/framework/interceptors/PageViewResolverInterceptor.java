@@ -1,4 +1,4 @@
-package org.xblog.framework.interceptors;
+package org.xblog.deprecated.framework.interceptors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,13 +6,14 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import org.xblog.framework.views.ViewNameResolver;
+import org.xblog.deprecated.framework.views.ViewNameResolver;
 
 /**
  * Intercepter for automatically resolving view name
  * @author griever
  *
  */
+@Deprecated
 public class PageViewResolverInterceptor extends HandlerInterceptorAdapter {
 	
 	private ViewNameResolver viewNameResolver;

@@ -1,8 +1,9 @@
-package org.xblog.framework.exceptions;
+package org.xblog.deprecated.framework.exceptions;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+@Deprecated
 public class XblogExceptionUtils {
 
 	public static String getStackTraceAsString(Exception ex) {

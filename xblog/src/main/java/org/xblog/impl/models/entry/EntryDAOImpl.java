@@ -21,7 +21,17 @@ public class EntryDAOImpl extends AbstractDAO<Entry> implements EntryDAO {
 	}
 
 	@Override
+	public List<Entry> getEntriesByUser(String userAlias) {
+		return getListByField("userAlias", userAlias);
+	}
+	
+	@Override
 	public Entry getByAlias(String alias) {
 		return getByField("alias", alias);
+	}
+
+	@Override
+	public List<Entry> getEntries() {
+		return getList();
 	}
 }

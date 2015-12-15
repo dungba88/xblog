@@ -1,7 +1,7 @@
-package org.xblog.impl.views;
+package org.xblog.deprecated.impl.views;
 
 import org.springframework.web.method.HandlerMethod;
-import org.xblog.framework.views.ViewNameResolver;
+import org.xblog.deprecated.framework.views.ViewNameResolver;
 
 public class ControllerActionViewNameResolver implements ViewNameResolver {
 	
